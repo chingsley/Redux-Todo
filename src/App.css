@@ -1,0 +1,30 @@
+.App {
+  /* text-align: center; */
+}
+
+.item {
+  /* border: 1px solid red; */
+  display: inline-block;
+  cursor: pointer;
+
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.not-completed {
+  background-color: rgb(183, 28, 28);
+  color: white;
+}
+
+.not-completed:hover {
+  background-color: rgb(193, 47, 47);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
