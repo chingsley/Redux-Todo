@@ -1,14 +1,17 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import { toggleTodoStatus } from "../actions";
+import { connect } from "react-redux";
+import { removeItem } from "../actions";
 
-export default (props) => {
+export const todoItem = (props) => {
   const toggleThisItemStatus = () => {
     props.toggleTodoStatus(props.item);
   };
-  console.log(props.item.completed);
+
+  const removeThisItem = () => {
+    props.removeItem(props.item.id);
+  };
   return (
-    <li>
+    <li className="listItem">
       <h4
         onClick={toggleThisItemStatus}
         className={
@@ -17,8 +20,11 @@ export default (props) => {
       >
         {props.item.value}
       </h4>
+      <button className="btn-remove" onClick={removeThisItem}>
+        remove
+      </button>
     </li>
   );
 };
 
-// export default connect(undefined, { toggleTodoStatus })(todoItem);
+export default connect(undefined, { removeItem })(todoItem);

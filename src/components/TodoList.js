@@ -11,12 +11,13 @@ class TodoList extends React.Component {
   };
 
   addNewItem = () => {
-    this.props.addNewItem(this.state.newItem);
+    if (this.state.newItem.trim()) {
+      this.setState({ newItem: "" });
+      this.props.addNewItem(this.state.newItem);
+    }
   };
 
   toggleTodoStatus = (index) => (item) => {
-    console.log("here.......");
-
     this.props.toggleTodoStatus(item, index);
   };
   render() {
