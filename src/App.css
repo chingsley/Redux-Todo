@@ -32,7 +32,13 @@ li {
   background-color: darkgreen;
 }
 
-.btn-remove {
+#editMode {
+  background-color: white;
+  color: black;
+}
+
+.btn-remove,
+.btn-edit {
   cursor: pointer;
   margin-left: 0.2rem;
   display: block;
